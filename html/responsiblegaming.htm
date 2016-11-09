@@ -1,0 +1,263 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>來得凱 Lyderkai 線上娛樂城</title>
+    <link rel="stylesheet" href="../css/style_sheet.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+     <script src="../js/ScriptZ.js"></script>
+    <script src="../js/favorite.js"></script>
+    <script src="../js/gamelist.js"></script>
+    <script src="../js/gamelog.js"></script>
+    <script src="../js/mymessage.js"></script>
+    <script src="../js/new_function.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div id="topic">
+        <a href="/"><img class="logo" src="../images/logo_test.png" /></a>
+        <!--上版頭-->
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="topbar">
+            <button type="button" class="default login" data-target=".navbar-collapse">登入</button>
+            <button type="button" class="default signup">註冊</button>
+        </div>
+        <form id="loginform" class="loginform sys_loginform">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3></h3>
+                    <input type="text" class="form-control" required id="Account" name="Account" autocomplete="off" placeholder="帳號">
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <input type="password" class="form-control sys_Password" required id="Password" name="Password" autocomplete="off" placeholder="密碼">
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-7 text-right">
+                </div>
+                <div class="col-md-3  col-xs-5">
+                    <input type="text" class="form-control required" name="Captcha" id="Captcha" placeholder="驗證碼">
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <button type="submit" class="default succ impact w100 sys_loginform_submit">提交</button>
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-6 text-left">
+                    <a href="<?=$path['signup']?>">註冊</a>
+                </div>
+                <div class="col-md-3 text-right col-xs-6">
+                    <a href="/home/support">忘記密碼</a>
+                </div>
+                <div class="col-md-6 col-md-offset-3  col-xs-12">
+                    <button type="button" class="default impact w100">關閉</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <nav id="m_menu" class="navbar navbar-inverse">
+        <div class="navmem-collapse collapse" aria-expanded="true">
+            <ul class="nav navbar-nav">
+                <li class="visible-xs">
+                    <p><?=lang('account')?>:<?=$userinfo_data->nickname?></p>
+                    <p><?=lang('blance')?>:<?=helper_util_getCurrencyTxt()?><span class="sys_txt_balance"><?=$userinfo_data->balance?></span></p>
+                    <button class="back align-right"></button>
+                </li>
+                <li>
+                    <a href="<?=$path['favorite']?>"><?=lang('my_favorites')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['mymessage']?>"><?=lang('my_msg')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['myaccount']?>"><?=lang('my_account')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['deposit']?>"><?=lang('deposit')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['withdrawal']?>"><?=lang('withdrawal')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['banksetting']?>"><?=lang('bank_setting')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['accountrecords']?>"><?=lang('account_records')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['gamelog']?>"><?=lang('game_logs')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['personalprofile']?>"><?=lang('personal_profile')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['logout']?>" class="red"><?=lang('logout')?></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+      <div id="marquee">
+          <div class="stage">
+              <div class="showbox">
+              </div>
+          </div>
+      </div>
+
+      <nav id="menu" class="navbar navbar-inverse bg2">
+          <!--主選單-->
+          <div class="container">
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="visible-xs">
+                          <button class="back" type="button"></button>
+                      </li>
+                      <li class="hidden-lg hidden-md"><!--手機版時顯示註冊-->
+                          <a>註冊</a>
+                      </li>
+
+                      <li><!--手機版時穩藏改用ICON-->
+                          <a href="home.htm">首頁</a>
+                      </li>
+                      <li>
+                          <a href="gamelist.htm">博彩遊戲</a>
+                      </li>
+                      <li>
+                          <a href="mobilecasino.htm">手機投注</a>
+                      </li>
+                      <li>
+                          <a href="promotions.htm">優惠活動</a>
+                      </li>
+                      <li>
+                          <a href="news.htm">新聞發布</a>
+                      </li>
+                      <li>
+                          <a href="support.htm">服務中心</a>
+                      </li>
+                  </ul>
+                  <!--<ul class="nav navbar-nav navbar-right"></ul>--> <!--如果有需要靠右邊的話-->
+              </div>
+          </div>
+      </nav>
+
+    </header>
+
+    <div id="ResponsibleGaming" class="pages">
+        <img src="../images/top_ResponsibleGaming.jpg" class="bar" />
+        <div class="title3">
+            <img src="../images/ResponsibleGaming_icon.png" />
+            <div>
+                <h1>責任博彩</h1>
+                <span>博彩屬於娛樂的一種，少部分的客戶可能會難以控制他的博彩習慣。</span>
+            </div>
+        </div>
+        <div class="word">
+            <div>
+                <h4>您應該知道</h4>
+                <p>
+                    博彩是一種休閒活動。無論你或你認識的人選擇去博彩，重要的是必須清楚博彩帶有潛在的風險。許多人在彩票遊戲、賭場遊戲中下注並且輸掉賭注，所以請您與您身邊的親朋好友記得如何保護自己，避免發生博彩問題。
+                </p>
+            </div>
+            <div>
+                <h4>失控</h4>
+                <p>
+                    當博彩的習慣一發不可收拾時，有些人可能會演變成博彩失控症，當他或她的生活中因此失去重心、家庭失和、財務發生問題、情緒不穩定時，表示這已經需要就醫。
+                </p>
+            </div>
+            <div>
+                <p>
+                    以下是幾個關於博彩失控症跡象的指標：
+                </p>
+            </div>
+            <div>
+                <p>
+                <ul>
+                        <li>賭博是否一直存在腦海中？</li>
+                        <li>你說的你做的任何事情都會在不知不覺中導引你去賭博？</li>
+                        <li>每次參與賭博後心理會有莫名的罪惡感？</li>
+                        <li>為了賭博造成家庭失和、身體不健康？</li>
+                        <li>欺騙你的家人或朋友關於自己參與賭博的頻率？</li>
+                        <li>賭博是為了希望可以贏多點錢好支付債務或帳單？</li>
+                        <li>告訴自己會在設定的極限值停止，但實際上卻要賭到最後一分錢？</li>
+                        <li>賭到想要用非法的手段讓你能繼續賭博？</li>
+                        <li>賭到想要自我了斷？</li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <p>
+                    以上情況只要有一項成立，就代表您可能逐漸產生博彩失控症，建議您可以尋求醫療幫助。
+                </p>
+            </div>
+            <div>
+                <p>更多諮詢請聯繫</p>
+                <p>專線電話：+855 888665555</p>
+                <p>時間：上午9點至下午6點</p>
+            </div>
+            <div>
+                <p>
+                    21歲以下與穆斯林人士禁止進入或逗留賭場。
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row quickbox">
+      <div class="col-md-3 col-sm-6 icon support">
+        <h5>客服QQ：</h5>
+        <a href="tencent://message/?uin=62888&amp;Site=&amp;menu=yes">62888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon hotcall">
+        <h5>博彩热线：</h5>
+        <a href="">+855 66288888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon mail">
+        <h5>联系邮箱：</h5>
+        <a href="mailto:888ldk@gmail.com ">888ldk@gmail.com </a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon servicetime">
+        <h5>7x24小时：</h5>
+        <a href="#" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')">在线客服</a>
+      </div>
+    </div>
+
+
+    <!-- [root]component/footer -->
+    <footer>
+      <ul class="nav-footer">
+          <li>
+              <a href="about.htm">關於我們</a>
+          </li>
+          <li>
+              <a href="contactus.htm">聯絡我們</a>
+          </li>
+          <li>
+              <a href="responsiblegaming.htm">責任博彩</a>
+          </li>
+          <li>
+              <a>條款與規則</a>
+          </li>
+          <li>
+              <a href="privacypolicy.htm">隱私權政策</a>
+          </li>
+          <li>
+              <a href="patronprotection.htm">聯盟合作</a>
+          </li>
+      </ul>
+
+        <hr>
+        <p class="text-center">© 2015 ALL Rights Reserved by Bao Jia Li International Co., Ltd.</p>
+    </footer>
+    <div class="contact">
+        <div class="contact_div" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')"></div>
+        <div class="contact_div" onclick="location.href='tencent://message/?uin=62888&amp;Site=&amp;menu=yes'"></div>
+        <div class="contact_div" onclick="location.href='Skype:live:888ldk'"></div>
+        <div class="contact_div" onclick="location.href='mailto:888ldk@gmail.com'"></div>
+        <div class="cclose">X</div>
+    </div>
+    </html>

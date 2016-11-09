@@ -1,0 +1,1071 @@
+@import "mixin";
+@import "variable";
+/*
+說明：
+VAR
+COMMON
+MAIN STYLE
+PAGES
+*/
+
+//https://developers.google.com/fonts/docs/getting_started#Effects
+//google 簡中/繁中/
+//@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+//@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+//@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+
+.game .pitem:not(.view) h4 {
+    color: beige;
+    background: #7f5810;
+    padding: 3px;
+    border-radius: 3px;
+    border: solid 1px #eee;
+}
+.game .pitem h4 input{
+    height:19px;
+}
+
+table tr th.text-right, table tr td.text-right {
+    text-align: right;
+}
+
+/*遊戲歷程、帳戶記錄欄位*/
+#example_wrapper {
+  select {
+      width: 50px;
+      min-width: 50px;
+      height: 32px;
+      border-radius: 3px;
+  }
+}
+
+
+/*加入會員 bar*/
+#joinus {
+    max-width: 1200px;
+    width: 100%;
+    height: 90px;
+    padding: 0;
+    z-index: 2;
+    .no {
+        color: $white;
+        font: 80px $fontA;
+        line-height: 80px;
+        margin: 0 0 0 20px;
+        position: absolute;
+    }
+    .til {
+        color: $white;
+        font: 30px $fontA;
+        margin: 5px 0 0 65px;
+        position: absolute;
+    }
+    .cont {
+        color: $white;
+        margin: 45px 0 0 65px;
+        position: absolute;
+    }
+    .signup { /*修正第二個 加入會員 的位置*/
+        margin:20px 35px;
+        display: inline-block;
+        float: right;
+        height: 50px;
+        width: 119px;
+        color: $white;
+        font: 32px/34px Impact, serif;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .add_pointer {
+      cursor: pointer;
+      height: 90px;
+    }
+}
+
+
+/*遊戲列表*/
+#gamelist {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
+    border: solid 1px;
+    border-color: #444 #666 #666 #666;
+    .nav-tabs{
+        li {
+            text-align: center;
+            width:20%;
+            a{
+                white-space:nowrap;
+                overflow:hidden;
+                padding:10px;
+                font-family: $fontA;
+            }
+        }
+    }
+
+    .tab-pane {
+        min-height: 260px;
+    }
+    .tab-content {
+        margin-top: 2em;
+    }
+    .row {
+        padding: 0 15px;
+    }
+    .col-md-3 { /*對齊修正*/
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        .pitem {
+            margin-top: 2%;
+            padding: 3%;
+            .new:before {
+                content: '';
+                position: absolute;
+                width: 30%;
+                height: 30%;
+                left: -2%;
+                top: -2%;
+                background: url(/images/icon_new.png) no-repeat top left;
+                background-size: contain;
+                z-index: 1;
+            }
+            .hot:after {
+                content: '';
+                position: absolute;
+                width: 30%;
+                height: 30%;
+                right: -2%;
+                top: -2%;
+                background: url("../images/icon_hot.png") no-repeat top right;
+                background-size: contain;
+            }
+            .pimg {
+                position: relative;
+                text-align: center;
+                display: inline-block;
+                cursor: pointer;
+                width: 90%;
+                .pbox{
+                    position: relative;
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 75%;
+                        /*Aspect Ratio 4:3 --> 100 vs 75 */
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                    }
+                }
+                h3 {
+                    width: 100%;
+                    color: $white;
+                    margin: 0;
+                    padding: 8px 0;
+                    font-style: initial;
+                    text-align: center;
+                    font: 20px/22px $fontA;
+                    white-space: nowrap;
+                }
+            }
+            .xx,
+            .btn_pwin,
+            .btn_pfun,
+            .btn_fav {
+                display: none;
+            }
+        }
+        .view {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            background: #333;
+            top: -50px;
+            left: 5%;
+            .pimg {
+                margin-top: 42px;
+            }
+            h3 {
+                top: -48px;
+                position: absolute;
+                display: block;
+                white-space: nowrap;
+                max-width: 100%;
+                overflow: hidden;
+                left: 0;
+                color: #4c310e;
+            }
+            .btn_pwin {
+                display: block;
+                height: 50px;
+                font: 32px/34px $fontA;
+                line-height: 50px;
+                color: $white;
+                margin: 10px 5%;
+                width: 90%;
+                box-shadow: rgba(0,0,0,0.3) 2px 2px;
+                cursor: pointer;
+            }
+            .btn_pfun {
+                background: url("/images/icon_arrow.png") top right no-repeat;
+                display: block;
+                height: 50px;
+                font: 20px/46px $fontA;
+                text-align: left;
+                color: $white;
+                margin: 10px 5%;
+                padding: 0 0 0 5%;
+                width: 90%;
+                border-bottom: solid 1px #ccc;
+                cursor: pointer;
+            }
+            .btn_fav {
+                background: url('../images/icon_fav.png') top right no-repeat;
+                display: block;
+                height: 50px;
+                font: 20px/46px $fontA;
+                text-align: left;
+                color: $white;
+                margin: 10px 5%;
+                padding: 0 0 0 5%;
+                width: 90%;
+                cursor: pointer;
+            }
+            .xx {
+                background: url('../images/icon_cancel.png') top right no-repeat;
+                display: block;
+                top: 5px;
+                right: 5px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+                cursor: pointer;
+            }
+        }
+    }
+    .col-md-7.inproduc {
+        height: 288px;
+        border-bottom: solid #196EC8 1px;
+        vertical-align: middle;
+        font: 20px/26px $fontA;
+        h3{
+            color:#196Ec8;
+            font: 24px/30px $fontA;
+        }
+        .btn_strat {
+            background: #196EC8;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 30px;
+            font: 24px/30px $fontA;
+            color: $white;
+            width: 180px;
+            padding: 0px 20px;
+            text-align: right;
+            -webkit-border-top-left-radius: 30px;
+            -moz-border-radius-topleft: 30px;
+            border-top-left-radius: 30px;
+        }
+    }
+    @media (max-width: 992px) {
+        .col-md-5 {
+            img {
+                width: 100%;
+            }
+        }
+        .col-md-7.inproduc {
+            height: 70px;
+            p {
+                display: none;
+            }
+        }
+    }
+    /*非電腦*/
+    @media (min-width: 480px) and (max-width: 992px) {
+        .col-md-3 {
+            .pitem {
+                font-size: 1em;
+                width: 100%;
+                margin: 10px 0% !important;
+            }
+        }
+    }
+    /*平版*/
+    @media (max-width: 479px) {
+        .col-md-3 {
+            .pitem {
+                .pimg {
+                    h3 {
+                        //set the font size in mobile
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-size: 15px !important;
+                    }
+                }
+            }
+            .view {
+                width: 100% !important;
+                height: 100%;
+                overflow-y: scroll;
+                position: fixed;
+                z-index: 999;
+                background: #333;
+                top: 0 !important;
+                left: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+    }
+    /*手機*/
+}
+
+/*分頁：網站介紹*/
+#introduction {
+    @include bg_BW;
+    font: 20px/22px $fontA;
+    margin: 0;
+    padding: 15px 0;
+    line-height: 28px;
+    border: solid 1px;
+    border-color: #444 #666 #444 #666;
+    h3 {
+        margin: 0;
+        font-family: $fontA;
+        color: #D9A541;
+    }
+    .h3_logo {
+        width: 190px;
+        margin: 0 20px;
+    }
+    img.rbar {
+        width: 384px;
+        max-width:400px;
+    }
+    @media (max-width: 992px) {
+        .col-md-8 {
+            width: 65%;
+        }
+        .col-md-4 {
+            width: 35%;
+            img {
+                float: right;
+            }
+        }
+    }
+    /*非電腦*/
+    @media (min-width: 481px) and (max-width: 992px) {
+        font-size: 2em;
+        h3 {
+            font-size: 4rem;
+        }
+    }
+    /*平版*/
+    @media (max-width: 480px) {
+        font-size: 1.2em;
+        h3 {
+            font-size: 1.8rem;
+        }
+      .h3_logo {
+        width: 130px;
+        margin: 0 10px;
+      }
+    }
+    /*手機*/
+}
+
+/*分頁：促銷活動*/
+#Promotions {
+    color: #e1bf55;
+    .container {
+        .row {
+            background: #111;
+        }
+        .col-md-6 {
+            color: #a07828;
+            font: 16px/20px $fontA;
+            text-align: center;
+            padding: 0;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            margin-top: 40px;
+        }
+        div.tbox {
+            border: solid 1px #a07828;
+            text-align: center;
+            margin: 10px;
+            padding: 15px;
+            span.num {
+                color: #e1bf55;
+                background: #000;
+                border: solid 1px #a07828;
+                font: 36px/36px $fontA;
+                padding: 5px 10px;
+                display: inline-block;
+            }
+            span.unit {
+                color: #a07828;
+                margin: 20px 5px;
+                display: inline-block;
+                width: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .col-md-6 {
+                div.tbox {
+                    span.num {
+                        font: 16px/16px $fontA;
+                        padding: 1px 4px;
+                    }
+                    span.unit {
+                        font: 12px/12px $fontA;
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*分頁：聯絡我們*/
+div#contact {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background: url("../images/service.png") 0 0/100% no-repeat;
+  height: 220px;
+  width: 50px;
+  @media (max-width: 480px) {
+    display:none;
+  }
+}
+#ContactUs, #PersonalProfile, #BankSettings {
+    label {
+        width: 30%;
+        float: left;
+        text-align: right;
+    }
+    input, textarea, select {
+        width: 52%;
+        height: 35px;
+    }
+    @media (max-width: 480px) {
+        label {
+            width: 100%;
+            text-align: left;
+            font-size: 12px;
+        }
+        input, textarea, select {
+            width: 100%;
+        }
+    }
+}
+
+
+#ContactUs {
+  label {
+      width: 30%;
+      text-align: right;
+  }
+
+  input{
+      width: 52%;
+      height: 35px;
+  }
+
+  textarea{
+      width: 52%;
+      height: 100px;
+  }
+  @media (max-width: 480px) {
+    label {
+        text-align: left;
+    }
+      input, textarea, select {
+          width: 100%;
+      }
+  }
+}
+
+
+/*分頁：新聞中心*/
+#News {
+    .item {
+        position: relative;
+        border: solid 1px #CCC;
+        margin: 0 4rem 2rem 120px;
+        padding: 10px;
+        padding-top: 0;
+        min-height: 50px;
+        background: rgba(111,111,111,0.2);
+        &:before {
+            content: '';
+            background: url("../images/News_icon_01.png") no-repeat top left;
+            width: 60px;
+            height: 50px;
+            display: block;
+            position: absolute;
+            left: -80px;
+        }
+        &:after {
+            content: '';
+            background: url('../images/News_icon_down.png') no-repeat top left;
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        .dateitem {
+            margin: 0;
+            padding: 0;
+            font: 10px/20px $fontA;
+        }
+        h5 {
+            margin: 0 10px;
+            font: 16px/20px $fontA;
+            max-width: 80%;
+            max-height: 20px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .subs {
+            display: none;
+        }
+    }
+    .item.show {
+        background: #eee;
+        h5 {
+            max-height: 100%;
+        }
+        &:after {
+            background: url('../images/News_icon_up.png') no-repeat top left;
+        }
+    }
+    @media (max-width: 480px) {
+        .item {
+            margin: 0 1rem 1rem 60px;
+            &:before {
+                background-size: 100%;
+                width: 48px;
+                height: 40px;
+                left: -55px;
+            }
+        }
+    }
+}
+
+/*分頁：客服中心*/
+#Support {
+    .citem {
+        display: block;
+        margin: 0 20px;
+        line-height: 40px;
+        .tleft, .tright {
+            padding: 0 10px;
+            color: $white;
+            display: inline-flex;
+            height: 40px;
+            width: 50%;
+            background: #222222; /* Old browsers */
+            background: -moz-linear-gradient(top, #222222 0%, #707275 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #222222 0%,#707275 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #222222 0%,#707275 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#707275',GradientType=0 ); /* IE6-9 */
+        }
+        .tright {
+            width: 47%;
+            margin-left: 1%;
+        }
+    }
+    @media (max-width: 480px) {
+        .tleft, .tright {
+            font-size: 12px;
+        }
+    }
+    .item {
+        position: relative;
+        border: solid 1px #ccc;
+        margin: 1rem 2rem;
+        padding: 5px;
+        min-height: 50px;
+        background: rgba(111,111,111,0.2);
+        &:after {
+            content: '';
+            background: url('../images/News_icon_down.png') no-repeat top left;
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+        }
+        p {
+            margin: 5px;
+        }
+        h5 {
+            font: bold 20px/22px $fontA;
+            max-width: 80%;
+            max-height: 22px;
+            overflow: hidden;
+            cursor: pointer;
+            font-family: $fontA;
+            &:before {
+                content: 'Q: ';
+                color: $white;
+                font: 20px/22px $fontA,blod;
+            }
+        }
+        .subs {
+            margin: 15px 0;
+            display: none;
+            &:before {
+                content: 'A: ';
+                color: $white;
+                font: 20px/22px $fontA,blod;
+            }
+        }
+    }
+    .item.show {
+        background: #eee;
+        h5 {
+            max-height: 100%;
+        }
+        &:after {
+            background: url('../images/News_icon_up.png') no-repeat top left;
+        }
+    }
+}
+
+/*分頁：帳戶中心 包含三個訊息分頁*/
+div#Account {
+    background: rgba(1,1,1,0.6);
+    .nav-tabs > li {
+        width: 33.33%;
+        text-align: center;
+    }
+    #History, #ReceivedMessage {
+        .item {
+            font-family: 16px/16px $fontA;
+            position: relative;
+            border: solid 1px #666;
+            margin: 1rem 2rem;
+            padding: 10px 150px;
+            min-height: 115px;
+            span.date{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            .cus {
+                background: url('../images/Message_icon_service.png');
+                background-size: 100%;
+                margin-left: -125px;
+                float: left;
+                width: 100px;
+                height: 100px;
+            }
+            .mes {
+                background: url('../images/Message_icon_Sending.png');
+                background-size: 100%;
+                margin-left: -125px;
+                float: left;
+                width: 100px;
+                height: 100px;
+            }
+            .trash {
+                background: url('../images/Message_icon_trash.png');
+                background-size: 100%;
+                position: absolute;
+                top: 30px;
+                right: 5px;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+            }
+            .reply {
+                background: url('../images/Message_icon_mailreply.png');
+                background-size: 100%;
+                position: absolute;
+                top: 30px;
+                right: 60px;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+            }
+            p {
+                margin: 5px;
+                font-size: 14px;
+            }
+            h5 {
+                font: bold 20px/20px $fontA;
+                max-width: 80%;
+                max-height: 20px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .subs {
+                margin: 15px 0;
+                display: none;
+            }
+            @media (max-width: 480px) {
+                padding: 5px;
+                margin: 1rem;
+                .cus {
+                    margin-left: initial;
+                    float: initial;
+                    width: 50px;
+                    height: 50px;
+                }
+                .trash {
+                    position: absolute;
+                    top: 25px;
+                    right: 5px;
+                    width: 30px;
+                    height: 30px;
+                }
+                .reply {
+                    position: absolute;
+                    top: 25px;
+                    right: 40px;
+                    width: 30px;
+                    height: 30px;
+                }
+                h5 {
+                    font: bold 12px/20px $fontA;
+                    max-width: 100%;
+                }
+                p {
+                    font-size: 12px;
+                }
+                .subs {
+                    margin: 15px 0;
+                }
+            }
+            /*手機*/
+        }
+        .item.show {
+            .subs {
+                display: block;
+            }
+        }
+    }
+    #SendingMessage {
+        .tit {
+            font: 26px/90px $fontA;
+            margin: 15px -15px;
+        }
+        input, textarea {
+            width: 100%;
+            border: solid 1px #000;
+        }
+        input {
+            height: 36px;
+        }
+        textarea {
+            height: 220px;
+        }
+        .col-md-2.col-ms-12.text-right {
+            font: bold 22px/50px $fontA;
+        }
+        @media (max-width: 480px) {
+            .tit {
+                font: bold 14px/16px $fontA;
+            }
+            .col-md-2.col-ms-12.text-right {
+                font: bold 22px/50px $fontA;
+                text-align: left;
+                img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+/*分頁：存款*/
+#Deposit {
+    #bankdeposit {
+        td {
+            font: bold 20px/22px $fontA;
+            min-height: 50px;
+            padding: 10px;
+        }
+    }
+    #sys_preview{
+        max-width:300px;max-height:300px;display:none;
+    }
+    @media (max-width: 480px) {
+        font: bold 14px/18px $fontA;
+        button.default {
+            margin: 3px 0;
+        }
+        #bankdeposit table tr, table {
+            font: bold 14px/18px $fontA;
+            td {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+        img.sp2 {
+            width: 100%;
+        }
+        h2 {
+            font: bold 16px/20px $fontA;
+            font-weight: bold;
+        }
+    }
+}
+
+/*分頁：提款*/
+#Withdrawal {
+    @media (max-width: 480px) {
+        h2 {
+            font: bold 16px/16px $fontA;
+        }
+    }
+}
+
+//mobile
+#MobileCasino {
+  div.list {
+    position: relative;
+    h4, p {
+      max-width: 610px;
+    }
+  }
+
+  .row{
+    padding: 0 3%;
+    div {
+      .GetApp {
+        position: relative;
+        float: left;
+        max-width: 100%;
+      }
+
+      h4 {
+        font: 24px/26px  $fontA;
+      }
+
+      p{
+
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 768px){
+    h4 {
+      font: 20px/26px $fontA;
+      color: $common_yellow;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+
+}
+
+
+#mobile_casino {
+  h1 {
+      margin-bottom: 0px;
+      margin-top: 36px;
+  }
+  @media (max-width: 768px){
+    h1 {
+        margin-bottom: 0px;
+        margin-top: 33px;
+    }
+  }
+
+  @media  (min-width: 768px){
+    .row {
+      .col-sm-7 {
+         width: 58.33333333%;
+         padding: 0 4%;
+      }
+    }
+  }
+
+}
+
+
+//datepicker
+td.day{
+  background:$white;
+  color:#999;
+}
+
+.dataTables_wrapper{
+  label{
+    color:#999;
+  }
+}
+
+.sys_message_badge {
+  background-color: $red;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*default is not show*/
+  display:none;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.input-group .form-control {z-index:1;}
+
+@media screen and (max-width: 860px){
+  .flex-direction-nav .flex-prev,
+  .flex-direction-nav .flex-next {
+    z-index: 1;
+  }
+}
+
+// .game04 {
+//     &:before {
+//         content: '';
+//         background: url('/images/logo_bbin_01.png') 0 0 no-repeat;
+//         background-size: cover;
+//         height: 40px;
+//         width: 40px;
+//         position: absolute;
+//         top: -15px;
+//         left: -45px;
+//     }
+//
+//     text-transform: capitalize;
+//     position: relative;
+//     display: inline-block;
+//     margin: 15px 6%;
+//     color: $light_blue;
+//     font-size: 20px;
+//
+//     @media (max-width: 992px) {
+//         margin: 15px 12%;
+//     }
+// }
+// .game05 {
+//     &:before {
+//         content: '';
+//         background: url('/images/logo_AG_01.png') 0 0 no-repeat;
+//         background-size: cover;
+//         height: 40px;
+//         width: 40px;
+//         position: absolute;
+//         top: -15px;
+//         left: -45px;
+//     }
+//
+//     text-transform: capitalize;
+//     position: relative;
+//     display: inline-block;
+//     margin: 15px 6%;
+//     color: $light_blue;
+//     font-size: 20px;
+//
+//     @media (max-width: 992px) {
+//         margin: 15px 12%;
+//     }
+// }
+//
+// .game02 {
+//   &:before {
+//     content: '';
+//     background: url('/images/logo_MICROGAMING_01.png') 0 0 no-repeat;
+//     background-size: cover;
+//     height: 40px;
+//     width: 40px;
+//     position: absolute;
+//     top: -15px;
+//     left: -45px;
+//   }
+//
+//   text-transform: capitalize;
+//   position: relative;
+//   display: inline-block;
+//   margin: 15px 6%;
+//   color: $light_blue;
+//   font-size: 20px;
+//
+//   @media (max-width: 992px) {
+//     margin: 15px 12%;
+//   }
+// }
+//
+// .game01 {
+//   &:before {
+//     content: '';
+//     background: url('/images/logo_ALLBET_01.png') 0 0 no-repeat;
+//     background-size: cover;
+//     height: 40px;
+//     width: 40px;
+//     position: absolute;
+//     top: -15px;
+//     left: -45px;
+//   }
+//
+//   text-transform: capitalize;
+//   position: relative;
+//   display: inline-block;
+//   margin: 15px 6%;
+//   color:$light_blue;
+//   text-shadow: 0 0 1px #196EC8;
+//   font-size: 20px;
+//
+//   @media (max-width: 992px) {
+//     margin: 15px 12%;
+//   }
+// }
+
+.btn.more, .sys_btn_loadmoregame {
+  font-size:20px;
+  line-height:22px;
+  display: block;
+  margin: 5px 40px;
+  float: right;
+  border-radius: 5px;
+  border: solid 1px #196EC8;
+  color:$light_blue;
+  background: none;
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: 10px auto;
+  }
+}

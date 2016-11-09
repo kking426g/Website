@@ -1,0 +1,756 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>來得凱 Lyderkai 線上娛樂城</title>
+    <link rel="stylesheet" href="../css/style_sheet.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+     <script src="../js/ScriptZ.js"></script>
+    <script src="../js/favorite.js"></script>
+    <script src="../js/gamelist.js"></script>
+    <script src="../js/gamelog.js"></script>
+    <script src="../js/mymessage.js"></script>
+    <script src="../js/new_function.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div id="topic">
+        <a href="/"><img class="logo" src="../images/logo_test.png" /></a>
+        <!--上版頭-->
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="topbar">
+            <button type="button" class="default login" data-target=".navbar-collapse">登入</button>
+            <button type="button" class="default signup">註冊</button>
+        </div>
+        <form id="loginform" class="loginform sys_loginform">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3></h3>
+                    <input type="text" class="form-control" required id="Account" name="Account" autocomplete="off" placeholder="帳號">
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <input type="password" class="form-control sys_Password" required id="Password" name="Password" autocomplete="off" placeholder="密碼">
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-7 text-right">
+                </div>
+                <div class="col-md-3  col-xs-5">
+                    <input type="text" class="form-control required" name="Captcha" id="Captcha" placeholder="驗證碼">
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <button type="submit" class="default succ impact w100 sys_loginform_submit">提交</button>
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-6 text-left">
+                    <a href="<?=$path['signup']?>">註冊</a>
+                </div>
+                <div class="col-md-3 text-right col-xs-6">
+                    <a href="/home/support">忘記密碼</a>
+                </div>
+                <div class="col-md-6 col-md-offset-3  col-xs-12">
+                    <button type="button" class="default impact w100">關閉</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <nav id="m_menu" class="navbar navbar-inverse">
+        <div class="navmem-collapse collapse" aria-expanded="true">
+            <ul class="nav navbar-nav">
+                <li class="visible-xs">
+                    <p><?=lang('account')?>:<?=$userinfo_data->nickname?></p>
+                    <p><?=lang('blance')?>:<?=helper_util_getCurrencyTxt()?><span class="sys_txt_balance"><?=$userinfo_data->balance?></span></p>
+                    <button class="back align-right"></button>
+                </li>
+                <li>
+                    <a href="<?=$path['favorite']?>"><?=lang('my_favorites')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['mymessage']?>"><?=lang('my_msg')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['myaccount']?>"><?=lang('my_account')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['deposit']?>"><?=lang('deposit')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['withdrawal']?>"><?=lang('withdrawal')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['banksetting']?>"><?=lang('bank_setting')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['accountrecords']?>"><?=lang('account_records')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['gamelog']?>"><?=lang('game_logs')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['personalprofile']?>"><?=lang('personal_profile')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['logout']?>" class="red"><?=lang('logout')?></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+      <div id="marquee">
+          <div class="stage">
+              <div class="showbox">
+              </div>
+          </div>
+      </div>
+
+      <nav id="menu" class="navbar navbar-inverse bg2">
+          <!--主選單-->
+          <div class="container">
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="visible-xs">
+                          <button class="back" type="button"></button>
+                      </li>
+                      <li class="hidden-lg hidden-md"><!--手機版時顯示註冊-->
+                          <a>註冊</a>
+                      </li>
+
+                      <li><!--手機版時穩藏改用ICON-->
+                          <a href="home.htm">首頁</a>
+                      </li>
+                      <li>
+                          <a href="gamelist.htm">博彩遊戲</a>
+                      </li>
+                      <li>
+                          <a href="mobilecasino.htm">手機投注</a>
+                      </li>
+                      <li>
+                          <a href="promotions.htm">優惠活動</a>
+                      </li>
+                      <li>
+                          <a href="news.htm">新聞發布</a>
+                      </li>
+                      <li>
+                          <a href="support.htm">服務中心</a>
+                      </li>
+                  </ul>
+                  <!--<ul class="nav navbar-nav navbar-right"></ul>--> <!--如果有需要靠右邊的話-->
+              </div>
+          </div>
+      </nav>
+
+    </header>
+
+    <div id="banner" class="w100">
+        <!--大刊版 banner-->
+        <div id="slider" class="flexslider">
+          <div class="flex-viewport">
+            <ul class="slides">
+              <li class="clone" aria-hidden="true">
+                <a href="_blank">
+                  <img src="../images/top03.jpg" alt="">
+                </a>
+              </li>
+              <li class="flex-active-slide" aria-hidden="true">
+                <a href="_blank">
+                  <img src="../images/top04.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ol>
+            <li>
+              <a href="#" class="flex-active">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+          </ol>
+        </div>
+    </div>
+    </header>
+
+    <!-- [root]home/event -->
+    <div id="event">
+        <div id="bonus" class="container visible-lg">
+            <div class="jackpot row">
+                <div class="col-md-3">
+                    <a href="<?=$path['jackpotlist']?>"><h3 class="jp_title"><?=lang('multi_level')?><br><?=lang('progressive_jackpot')?></h3></a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="jp_total"><?=lang('total_jackpot_pool')?></h3> :
+                </div>
+                <div class="col-md-6">
+                    <span class="money">
+                        <!--<script onload="removeMGJPTototalTitle()" language="javascript" type="text/javascript" src="http://www.tickerassist.co.uk/ProgressiveTickers/include/js/ProgressiveTickersControl.js?currency=CNY"></script>-->
+                    </span>
+                </div>
+            </div>
+            <div class="winner row">
+                <div class="col-md-3">
+                    <h3 class="win_title"><?=lang('latest_winners')?></h3>
+                </div>
+                <div class="item col-md-3">
+                    <h4><?=lang('player_name')?></h4>
+                    <span class="plat"><?=lang('game_platform')?>:</span>
+                    <span class="money2">50000.0</span>
+                </div>
+                <div class="item col-md-3">
+                    <h4><?=lang('player_name')?></h4>
+                    <span class="plat"><?=lang('game_platform')?>:</span>
+                    <span class="money2">50000.0</span>
+                </div>
+                <div class="item col-md-3">
+                    <h4><?=lang('player_name')?></h4>
+                    <span class="plat"><?=lang('game_platform')?>:</span>
+                    <span class="money2">50000.0</span>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--加入會員 banner-->
+    <div id="joinus" class="container bg5 visible-lg">
+        <div class="row">
+            <div class="col-lg-3 add_pointer" onclick="location.href= '/home/signup';">
+                <span class="no">1</span>
+                <span class="til">註冊</span>
+                <span class="cont">只要30秒免費建立您的線上娛樂城帳號</span>
+            </div>
+            <div class="col-lg-3 add_pointer" onclick="go_url('banksit')">
+                <span class="no">2</span>
+                <span class="til">存款</span>
+                <span class="cont">转账至少¥10元至指定的官方账户</span>
+            </div>
+            <div class="col-lg-3 add_pointer" onclick="go_url('gamelist')">
+                <span class="no">3</span>
+                <span class="til">開始大贏特贏</span>
+                <span class="cont">您可以隨時隨地進行真人現場遊戲、視頻老虎機與各種精采遊戲</span>
+            </div>
+            <div class="col-lg-3">
+                <a href="" class="bg1 signup">註冊</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="gamelist" class="container">
+      <div id="gamelist" class="container">
+          <!--遊戲列表-->
+          <div class="slider">
+              <div>
+                  <ul class="nav nav-tabs flex">
+                    <li class="sys_gamelist_tab" >
+                        <a data-toggle="pill" href="#list1">精選遊戲</a>
+                    </li>
+                    <li class="sys_gamelist_tab" >
+                        <a data-toggle="pill" href="#list2">真人荷官</a>
+                    </li>
+                    <li class="sys_gamelist_tab" >
+                        <a data-toggle="pill" href="#list3">視頻老虎機</a>
+                    </li>
+                    <li class="sys_gamelist_tab" >
+                        <a data-toggle="pill" href="#list4">牌桌遊戲</a>
+                    </li>
+                    <li class="sys_gamelist_tab" >
+                        <a data-toggle="pill" href="#list5">體育和彩票</a>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="tab-content">
+             <div id="list1" class="tab-pane fade in active">
+                  <p class="game04">BBIN</p>
+                  <div class="row sys_row sys_gamelist_1_1">
+                      <div class="col-md-3 col-xs-6 game">
+                            <div class="pitem">
+                              <div class="pimg hot">
+                                <div class="pbox">
+                                  <img src="../images/gamecard_AG001.jpg" alt="">
+                                </div>
+                                <h3>BBIN電子</h3>
+                              </div>
+                              <div class="btn_pwin bg2">進入遊戲</div>
+                              <div class="btn_fav gray">加入最愛</div>
+                              <div class="xx"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                              <div class="pimg hot">
+                                <div class="pbox">
+                                  <img src="../images/gamecard_AG002.jpg" alt="">
+                                </div>
+                                <h3>BBIN電子</h3>
+                              </div>
+                              <div class="btn_pwin bg2">進入遊戲</div>
+                              <div class="btn_fav gray">加入最愛</div>
+                              <div class="xx"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                        <div class="pitem">
+                          <div class="pimg hot">
+                            <div class="pbox">
+                              <img src="../images/gamecard_AG003.jpg" alt="">
+                            </div>
+                            <h3>BBIN電子</h3>
+                          </div>
+                          <div class="btn_pwin bg2">進入遊戲</div>
+                          <div class="btn_fav gray">加入最愛</div>
+                          <div class="xx"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                        <div class="pitem">
+                          <div class="pimg hot">
+                            <div class="pbox">
+                              <img src="../images/gamecard_AG004.jpg" alt="">
+                            </div>
+                            <h3>BBIN電子</h3>
+                          </div>
+                          <div class="btn_pwin bg2">進入遊戲</div>
+                          <div class="btn_fav gray">加入最愛</div>
+                          <div class="xx"></div>
+                        </div>
+                      </div>
+                      <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                  </div>
+              </div>
+
+
+
+              <div id="list2" class="tab-pane fade">
+                 <p class="game04">BBIN</p>
+                 <div class="row sys_row sys_gamelist_1_1">
+                     <div class="col-md-3 col-xs-6 game">
+                           <div class="pitem">
+                             <div class="pimg hot">
+                               <div class="pbox">
+                                 <img src="../images/gamecard_ALLBET01.jpg" alt="">
+                               </div>
+                               <h3>BBIN電子</h3>
+                             </div>
+                             <div class="btn_pwin bg2">進入遊戲</div>
+                             <div class="btn_fav gray">加入最愛</div>
+                             <div class="xx"></div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 col-xs-6 game">
+                         <div class="pitem">
+                             <div class="pimg hot">
+                               <div class="pbox">
+                                 <img src="../images/gamecard_ALLBET02.jpg" alt="">
+                               </div>
+                               <h3>BBIN電子</h3>
+                             </div>
+                             <div class="btn_pwin bg2">進入遊戲</div>
+                             <div class="btn_fav gray">加入最愛</div>
+                             <div class="xx"></div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 col-xs-6 game">
+                       <div class="pitem">
+                         <div class="pimg hot">
+                           <div class="pbox">
+                             <img src="../images/gamecard_ALLBET03.jpg" alt="">
+                           </div>
+                           <h3>BBIN電子</h3>
+                         </div>
+                         <div class="btn_pwin bg2">進入遊戲</div>
+                         <div class="btn_fav gray">加入最愛</div>
+                         <div class="xx"></div>
+                       </div>
+                     </div>
+                     <div class="col-md-3 col-xs-6 game">
+                       <div class="pitem">
+                         <div class="pimg hot">
+                           <div class="pbox">
+                             <img src="../images/gamecard_ALLBET04.jpg" alt="">
+                           </div>
+                           <h3>BBIN電子</h3>
+                         </div>
+                         <div class="btn_pwin bg2">進入遊戲</div>
+                         <div class="btn_fav gray">加入最愛</div>
+                         <div class="xx"></div>
+                       </div>
+                     </div>
+                     <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                 </div>
+              </div>
+
+               <div id="list3" class="tab-pane fade">
+                  <p class="game04">BBIN</p>
+                  <div class="row sys_row sys_gamelist_1_1">
+                      <div class="col-md-3 col-xs-6 game">
+                            <div class="pitem">
+                              <div class="pimg hot">
+                                <div class="pbox">
+                                  <img src="../images/gamecard_LD0001.jpg" alt="">
+                                </div>
+                                <h3>BBIN電子</h3>
+                              </div>
+                              <div class="btn_pwin bg2">進入遊戲</div>
+                              <div class="btn_fav gray">加入最愛</div>
+                              <div class="xx"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                              <div class="pimg hot">
+                                <div class="pbox">
+                                  <img src="../images/gamecard_LD0002.jpg" alt="">
+                                </div>
+                                <h3>BBIN電子</h3>
+                              </div>
+                              <div class="btn_pwin bg2">進入遊戲</div>
+                              <div class="btn_fav gray">加入最愛</div>
+                              <div class="xx"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                        <div class="pitem">
+                          <div class="pimg hot">
+                            <div class="pbox">
+                              <img src="../images/gamecard_LD0003.jpg" alt="">
+                            </div>
+                            <h3>BBIN電子</h3>
+                          </div>
+                          <div class="btn_pwin bg2">進入遊戲</div>
+                          <div class="btn_fav gray">加入最愛</div>
+                          <div class="xx"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-xs-6 game">
+                        <div class="pitem">
+                          <div class="pimg hot">
+                            <div class="pbox">
+                              <img src="../images/gamecard_LD0004.jpg" alt="">
+                            </div>
+                            <h3>BBIN電子</h3>
+                          </div>
+                          <div class="btn_pwin bg2">進入遊戲</div>
+                          <div class="btn_fav gray">加入最愛</div>
+                          <div class="xx"></div>
+                        </div>
+                      </div>
+                      <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                  </div>
+                </div>
+
+                <div id="list4" class="tab-pane fade">
+                   <p class="game04">BBIN</p>
+                   <div class="row sys_row sys_gamelist_1_1">
+                       <div class="col-md-3 col-xs-6 game">
+                             <div class="pitem">
+                               <div class="pimg hot">
+                                 <div class="pbox">
+                                   <img src="../images/gamecard_LD0001.jpg" alt="">
+                                 </div>
+                                 <h3>BBIN電子</h3>
+                               </div>
+                               <div class="btn_pwin bg2">進入遊戲</div>
+                               <div class="btn_fav gray">加入最愛</div>
+                               <div class="xx"></div>
+                           </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                           <div class="pitem">
+                               <div class="pimg hot">
+                                 <div class="pbox">
+                                   <img src="../images/gamecard_LD0002.jpg" alt="">
+                                 </div>
+                                 <h3>BBIN電子</h3>
+                               </div>
+                               <div class="btn_pwin bg2">進入遊戲</div>
+                               <div class="btn_fav gray">加入最愛</div>
+                               <div class="xx"></div>
+                           </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                         <div class="pitem">
+                           <div class="pimg hot">
+                             <div class="pbox">
+                               <img src="../images/gamecard_LD0003.jpg" alt="">
+                             </div>
+                             <h3>BBIN電子</h3>
+                           </div>
+                           <div class="btn_pwin bg2">進入遊戲</div>
+                           <div class="btn_fav gray">加入最愛</div>
+                           <div class="xx"></div>
+                         </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                         <div class="pitem">
+                           <div class="pimg hot">
+                             <div class="pbox">
+                               <img src="../images/gamecard_LD0004.jpg" alt="">
+                             </div>
+                             <h3>BBIN電子</h3>
+                           </div>
+                           <div class="btn_pwin bg2">進入遊戲</div>
+                           <div class="btn_fav gray">加入最愛</div>
+                           <div class="xx"></div>
+                         </div>
+                       </div>
+                       <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                   </div>
+                   <p class="game04">BBIN</p>
+                   <div class="row sys_row sys_gamelist_1_1">
+                       <div class="col-md-3 col-xs-6 game">
+                             <div class="pitem">
+                               <div class="pimg hot">
+                                 <div class="pbox">
+                                   <img src="../images/gamecard_TG001.jpg" alt="">
+                                 </div>
+                                 <h3>BBIN電子</h3>
+                               </div>
+                               <div class="btn_pwin bg2">進入遊戲</div>
+                               <div class="btn_fav gray">加入最愛</div>
+                               <div class="xx"></div>
+                           </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                           <div class="pitem">
+                               <div class="pimg hot">
+                                 <div class="pbox">
+                                   <img src="../images/gamecard_TG002.jpg" alt="">
+                                 </div>
+                                 <h3>BBIN電子</h3>
+                               </div>
+                               <div class="btn_pwin bg2">進入遊戲</div>
+                               <div class="btn_fav gray">加入最愛</div>
+                               <div class="xx"></div>
+                           </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                         <div class="pitem">
+                           <div class="pimg hot">
+                             <div class="pbox">
+                               <img src="../images/gamecard_TG003.jpg" alt="">
+                             </div>
+                             <h3>BBIN電子</h3>
+                           </div>
+                           <div class="btn_pwin bg2">進入遊戲</div>
+                           <div class="btn_fav gray">加入最愛</div>
+                           <div class="xx"></div>
+                         </div>
+                       </div>
+                       <div class="col-md-3 col-xs-6 game">
+                         <div class="pitem">
+                           <div class="pimg hot">
+                             <div class="pbox">
+                               <img src="../images/gamecard_TG004.jpg" alt="">
+                             </div>
+                             <h3>BBIN電子</h3>
+                           </div>
+                           <div class="btn_pwin bg2">進入遊戲</div>
+                           <div class="btn_fav gray">加入最愛</div>
+                           <div class="xx"></div>
+                         </div>
+                       </div>
+                       <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                   </div>
+                 </div>
+
+
+                 <div id="list5" class="tab-pane fade">
+                    <p class="game04">BBIN</p>
+                    <div class="row sys_row sys_gamelist_1_1">
+                        <div class="col-md-3 col-xs-6 game">
+                              <div class="pitem">
+                                <div class="pimg hot">
+                                  <div class="pbox">
+                                    <img src="../images/gamecard_TG001.jpg" alt="">
+                                  </div>
+                                  <h3>BBIN電子</h3>
+                                </div>
+                                <div class="btn_pwin bg2">進入遊戲</div>
+                                <div class="btn_fav gray">加入最愛</div>
+                                <div class="xx"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                            <div class="pitem">
+                                <div class="pimg hot">
+                                  <div class="pbox">
+                                    <img src="../images/gamecard_TG002.jpg" alt="">
+                                  </div>
+                                  <h3>BBIN電子</h3>
+                                </div>
+                                <div class="btn_pwin bg2">進入遊戲</div>
+                                <div class="btn_fav gray">加入最愛</div>
+                                <div class="xx"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                            <div class="pimg hot">
+                              <div class="pbox">
+                                <img src="../images/gamecard_TG003.jpg" alt="">
+                              </div>
+                              <h3>BBIN電子</h3>
+                            </div>
+                            <div class="btn_pwin bg2">進入遊戲</div>
+                            <div class="btn_fav gray">加入最愛</div>
+                            <div class="xx"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                            <div class="pimg hot">
+                              <div class="pbox">
+                                <img src="../images/gamecard_TG004.jpg" alt="">
+                              </div>
+                              <h3>BBIN電子</h3>
+                            </div>
+                            <div class="btn_pwin bg2">進入遊戲</div>
+                            <div class="btn_fav gray">加入最愛</div>
+                            <div class="xx"></div>
+                          </div>
+                        </div>
+                        <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                    </div>
+                    <p class="game04">BBIN</p>
+                    <div class="row sys_row sys_gamelist_1_1">
+                        <div class="col-md-3 col-xs-6 game">
+                              <div class="pitem">
+                                <div class="pimg hot">
+                                  <div class="pbox">
+                                    <img src="../images/gamecard_TG005.jpg" alt="">
+                                  </div>
+                                  <h3>BBIN電子</h3>
+                                </div>
+                                <div class="btn_pwin bg2">進入遊戲</div>
+                                <div class="btn_fav gray">加入最愛</div>
+                                <div class="xx"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                            <div class="pitem">
+                                <div class="pimg hot">
+                                  <div class="pbox">
+                                    <img src="../images/gamecard_TG006.jpg" alt="">
+                                  </div>
+                                  <h3>BBIN電子</h3>
+                                </div>
+                                <div class="btn_pwin bg2">進入遊戲</div>
+                                <div class="btn_fav gray">加入最愛</div>
+                                <div class="xx"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                            <div class="pimg hot">
+                              <div class="pbox">
+                                <img src="../images/gamecard_TG007.jpg" alt="">
+                              </div>
+                              <h3>BBIN電子</h3>
+                            </div>
+                            <div class="btn_pwin bg2">進入遊戲</div>
+                            <div class="btn_fav gray">加入最愛</div>
+                            <div class="xx"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 game">
+                          <div class="pitem">
+                            <div class="pimg hot">
+                              <div class="pbox">
+                                <img src="../images/gamecard_TG008.jpg" alt="">
+                              </div>
+                              <h3>BBIN電子</h3>
+                            </div>
+                            <div class="btn_pwin bg2">進入遊戲</div>
+                            <div class="btn_fav gray">加入最愛</div>
+                            <div class="xx"></div>
+                          </div>
+                        </div>
+                        <button class="sys_btn_loadmoregame sys_gamelist_button_1_1" data-sys-row-target="sys_gamelist_row_1_1">更多</button>
+                    </div>
+                  </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="introduction" class="row">
+      <div  class="row">
+        <div class="col-lg-8 col-md-12">
+            <p>
+            <h3>
+                <img class="h3_logo" src="../images/logo_c.png" />
+                為何選擇我們？
+            </h3>
+            <div class="li_indent">。安全、百分之百合法，我們是最值得信賴的線上娛樂城</div>
+            <div class="li_indent">。在這裡您可以享受到最佳的連線超級大獎的視頻老虎機、真人荷官現場遊戲以及視頻撲克遊戲</div>
+            <div class="li_indent">。簡單易上手，輕鬆點擊幾個按鈕就能享受精彩遊戲。</div>
+            </p>
+        </div>
+        <div class="col-lg-4 visible-lg">
+          <img src="../images/banner-01.jpg" width="350"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row quickbox">
+      <div class="col-md-3 col-sm-6 icon support">
+        <h5>客服QQ：</h5>
+        <a href="tencent://message/?uin=62888&amp;Site=&amp;menu=yes">62888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon hotcall">
+        <h5>博彩热线：</h5>
+        <a href="">+855 66288888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon mail">
+        <h5>联系邮箱：</h5>
+        <a href="mailto:888ldk@gmail.com ">888ldk@gmail.com </a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon servicetime">
+        <h5>7x24小时：</h5>
+        <a href="#" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')">在线客服</a>
+      </div>
+    </div>
+
+
+    <!-- [root]component/footer -->
+    <footer>
+      <ul class="nav-footer">
+          <li>
+              <a href="about.htm">關於我們</a>
+          </li>
+          <li>
+              <a href="contactus.htm">聯絡我們</a>
+          </li>
+          <li>
+              <a href="responsiblegaming.htm">責任博彩</a>
+          </li>
+          <li>
+              <a>條款與規則</a>
+          </li>
+          <li>
+              <a href="privacypolicy.htm">隱私權政策</a>
+          </li>
+          <li>
+              <a href="patronprotection.htm">聯盟合作</a>
+          </li>
+      </ul>
+
+        <hr>
+        <p class="text-center">© 2015 ALL Rights Reserved by Bao Jia Li International Co., Ltd.</p>
+    </footer>
+    <div class="contact">
+        <div class="contact_div" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')"></div>
+        <div class="contact_div" onclick="location.href='tencent://message/?uin=62888&amp;Site=&amp;menu=yes'"></div>
+        <div class="contact_div" onclick="location.href='Skype:live:888ldk'"></div>
+        <div class="contact_div" onclick="location.href='mailto:888ldk@gmail.com'"></div>
+        <div class="cclose">X</div>
+    </div>
+    </html>

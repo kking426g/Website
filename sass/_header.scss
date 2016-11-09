@@ -1,0 +1,236 @@
+@import "variable";
+@CHARSET "UTF-8";
+
+// .login-form {
+//   margin: 100px auto;
+//   max-width: 400px;
+// }
+//
+// .register-form {
+//   margin: 100px auto;
+//   max-width: 800px;
+// }
+
+/*header 標頭與登入頁*/
+#topic {
+    min-height: 135px;
+    height: auto;
+    .topbar{
+        position: absolute;
+        top: 40px;
+        right:0px;
+    }
+    .language {
+        display: block;
+        width: 130px;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        z-index: 99;
+        height: 24px;
+        overflow: hidden;
+        padding-right: 0;
+        color: $white;
+        border: solid 1px $white;
+        border-radius: 3px;
+        li {
+            margin-left: -40px;
+            list-style-type: none;
+            padding: 0 0 3px 3px;
+            border-right: solid 1px $white;
+            margin-right: 25px;
+            display: none;
+            &:hover {
+                background: #333;
+            }
+        }
+        &.hover {
+            overflow: initial;
+            height: initial;
+            background: #666;
+            li {
+                display: block;
+                opacity: 0.8;
+            }
+        }
+        .visit {
+            font-weight: bolder;
+            display: block;
+            &:after {
+                content: '';
+                display: inline-block;
+                border-style: solid;
+                border-width: 15px 9px 0 9px;
+                border-color: $white transparent transparent transparent;
+                position: absolute;
+                top: 4px;
+                right: 4px;
+            }
+        }
+        @media (max-width: 480px) {
+            width: 115px;
+            top: 0;
+            right: 0;
+            font-size: 0.6rem;
+        }
+        /*手機*/
+        @media (min-width: 480px) and (max-width: 992px) {
+            top: 5px;
+            right: 5px;
+        }
+        /*平版*/
+    }
+    /*登錄選單*/
+    .loginform {
+        display: none;
+        padding-top:70px;
+        .row {
+            padding: 0 0 40px 0;
+            margin: 0;
+            text-align: center;
+            color: $white;
+            font-size: 1.5rem;
+            div {
+                margin-top: 1rem;
+                .form-control {
+                    height: 40px;
+                }
+            }
+            .col-md-6, .col-xs-12 {
+                vertical-align: middle;
+                input[type="button"],
+                input[type="submit"] {
+                    height: 36px;
+                    line-height: 36px;
+                    font: 24px/26px $fontA; //28px Impact;
+                    text-align: center;
+                    box-shadow: 0 1px 1px 1px rgba(50,50,50,.9);
+                    width: 100%;
+                    border: 0;
+                    text-shadow: 1px 1px 1px #666;
+                }
+            }
+        }
+    }
+    .signupform {
+        display: block;
+        padding-top: 90px;
+        label{
+          float:left;
+        }
+        .row {
+            margin: 0;
+            text-align: center;
+            color: $white;
+            font-size: 1.5rem;
+            div {
+                .form-control {
+                }
+                .listshow {
+                    padding: 0 1%;
+                    width: 100%;
+                    height: 200px;
+                    overflow-y: scroll;
+                    background: $white;
+                    color: #000;
+                    text-align:left;
+                }
+            }
+            .col-md-5, .col-xs-10 {
+                vertical-align: middle;
+                text-align: left;
+                select {
+                    display: inline-block;
+                    width: 30%;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 5px;
+                }
+                .afterselect {
+                    display: inline-block;
+                    width: 68%;
+                }
+                input[type="button"],
+                input[type="submit"] {
+                    height: 36px;
+                    line-height: 36px;
+                    font: 24px/26px $fontA; //28px Impact;
+                    text-align: center;
+                    box-shadow: 0 1px 1px 1px rgba(50,50,50,.9);
+                    width: 100%;
+                    border: 0;
+                    text-shadow: 1px 1px 1px #666;
+                }
+            }
+        }
+    }
+    .logo {
+        float: left;
+        margin-bottom: -130px;
+    }
+    @media (max-width: 992px) {
+        margin-top: 0px;
+        .logo {
+            margin: 0;
+            width: auto;
+            height: 80px;
+            top: 0;
+            left: 45%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    }
+    @media (max-width: 992px) {
+        max-width: 1200px;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        //.login, .login:link, .login:hover, .login:focus, .login:active {
+        //    font: 32px/34px $fontA; //30px Impact, serif;
+        //    height: initial;
+        //    line-height: initial;
+        //    margin: 35px 0 0 0;
+        //}
+        .navbar-header {
+            float: left;
+            button {
+                border: none 0px;
+            }
+        }
+    }
+    /*非電腦*/
+    @media (min-width: 481px) and (max-width: 992px) {
+        min-height: 120px;
+    }
+    /*平版*/
+    @media (max-width: 480px) {
+        min-height: 80px;
+    }
+}
+
+
+
+form[role=login] {
+  font: 16px/1.6em $fontA;
+  padding: 15px 26px 20px 26px;
+  background: $white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  h2 {
+    font-size: 20px;
+    color: #5d5c5c;
+    margin-bottom: 0.5em;
+  }
+  p {
+    color: #929292;
+    margin-bottom: 25px;
+  }
+  input, button {
+    font-size: 16px;
+  }
+  a.btn {
+    font-size: 16px;
+    margin: 16px 0;
+  }
+}

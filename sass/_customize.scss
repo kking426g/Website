@@ -1,0 +1,148 @@
+@import "mixin";
+@import "variable";
+
+
+#TermsConditions div.word textarea{
+    color: $white;  height: 100%; width: 96%; margin: 40px 2%;   background: #000;
+    font:14px/16px $fontA;
+}
+#AccountRecords,
+#GameLogs{
+    div, div lable{
+        font:14px/30px $fontA;
+    }
+}
+
+
+
+//2016-08-10
+div.listitem{
+    text-align: center;
+    font: 16px/18px $fontA;
+    color:#9ec0ca;
+    div.icon{
+        @include bg_BW;
+        text-align: left;
+        padding:10px 0 0 90px;
+        min-height: 80px;
+        color:#9ec0ca;
+        h4{
+            color: #46f4ea;
+            margin-bottom: 2px;
+        }
+        &:before{
+            height:56px;
+            width:52px;
+            position:absolute;
+            top:10px;
+            left:40px;
+        }
+        &.service:before {
+            content: url('/images/icon_05.png');
+        }
+        &.product:before{
+            content: url('/images/icon_06.png');
+        }
+        &.help:before{
+            content: url('/images/icon_07.png');
+        }
+
+    }
+    p.icon{
+        &.tleft:before{
+            content: url('/images/icon_08.png');
+        }
+        &.rleft:before{
+            content: url('/images/icon_09.png');
+        }
+
+    }
+    div.box{
+        border: solid 1px;
+        border-color: #444 #666 #444 #666;
+        color:#9ec0ca;
+        h5{
+            color:$white;
+            margin:20px 15px;
+            text-align: left;
+        }
+        p{
+            color: #01fdcc;
+            margin: 20px 15px;
+            text-align: left;
+            a,a:link{
+               margin: 0 15px;
+            }
+            img{
+                margin: 5px 0;
+            }
+        }
+
+        span.bignum{
+            margin:0 0.3em;
+            letter-spacing:2px;
+            color:$red;
+            font: 1.5em/1.5em $fontA;
+        }
+        span.red{
+            color:$red;
+            font: 1.6em/1.6sem $fontA;
+        }
+    }
+}
+
+div.quickbox{
+    @include bg_BW;
+    text-align: center;
+    font: 16px/18px $fontA;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 15px 0;
+    line-height: 28px;
+    border: solid 1px;
+    border-color: #444 #666 #444 #666;
+    color:#9ec0ca;
+    h5{
+        color:#46f4ea;
+    }
+    div.icon{
+        text-align: left;
+        padding:0 0 0 90px;
+        min-height: 50px;;
+        &:before{
+            height:50px;
+            width:50px;
+            position:absolute;
+            top:5px;
+            left:20px;
+        }
+        &.support:before {
+            content: url('../images/icon_01.png');
+        }
+        &.hotcall:before{
+            content: url('../images/icon_02.png');
+        }
+        &.mail:before{
+            content: url('../images/icon_03.png');
+        }
+        &.servicetime:before{
+            content: url('../images/icon_04.png');
+        }
+    }
+}
+
+
+article{
+    display: none;
+}
+
+
+.row{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.yellow {
+  color: yellow;
+  display: inline-block;
+}

@@ -1,0 +1,270 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>來得凱 Lyderkai 線上娛樂城</title>
+    <link rel="stylesheet" href="../css/style_sheet.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+     <script src="../js/ScriptZ.js"></script>
+    <script src="../js/favorite.js"></script>
+    <script src="../js/gamelist.js"></script>
+    <script src="../js/gamelog.js"></script>
+    <script src="../js/mymessage.js"></script>
+    <script src="../js/new_function.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div id="topic">
+        <a href="/"><img class="logo" src="../images/logo_test.png" /></a>
+        <!--上版頭-->
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="topbar">
+            <button type="button" class="default login" data-target=".navbar-collapse">登入</button>
+            <button type="button" class="default signup">註冊</button>
+        </div>
+        <form id="loginform" class="loginform sys_loginform">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3></h3>
+                    <input type="text" class="form-control" required id="Account" name="Account" autocomplete="off" placeholder="帳號">
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <input type="password" class="form-control sys_Password" required id="Password" name="Password" autocomplete="off" placeholder="密碼">
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-7 text-right">
+                </div>
+                <div class="col-md-3  col-xs-5">
+                    <input type="text" class="form-control required" name="Captcha" id="Captcha" placeholder="驗證碼">
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <button type="submit" class="default succ impact w100 sys_loginform_submit">提交</button>
+                </div>
+                <div class="col-md-3 col-md-offset-3 col-xs-6 text-left">
+                    <a href="<?=$path['signup']?>">註冊</a>
+                </div>
+                <div class="col-md-3 text-right col-xs-6">
+                    <a href="/home/support">忘記密碼</a>
+                </div>
+                <div class="col-md-6 col-md-offset-3  col-xs-12">
+                    <button type="button" class="default impact w100">關閉</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <nav id="m_menu" class="navbar navbar-inverse">
+        <div class="navmem-collapse collapse" aria-expanded="true">
+            <ul class="nav navbar-nav">
+                <li class="visible-xs">
+                    <p><?=lang('account')?>:<?=$userinfo_data->nickname?></p>
+                    <p><?=lang('blance')?>:<?=helper_util_getCurrencyTxt()?><span class="sys_txt_balance"><?=$userinfo_data->balance?></span></p>
+                    <button class="back align-right"></button>
+                </li>
+                <li>
+                    <a href="<?=$path['favorite']?>"><?=lang('my_favorites')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['mymessage']?>"><?=lang('my_msg')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['myaccount']?>"><?=lang('my_account')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['deposit']?>"><?=lang('deposit')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['withdrawal']?>"><?=lang('withdrawal')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['banksetting']?>"><?=lang('bank_setting')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['accountrecords']?>"><?=lang('account_records')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['gamelog']?>"><?=lang('game_logs')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['personalprofile']?>"><?=lang('personal_profile')?></a>
+                </li>
+                <li>
+                    <a href="<?=$path['logout']?>" class="red"><?=lang('logout')?></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+      <div id="marquee">
+          <div class="stage">
+              <div class="showbox">
+              </div>
+          </div>
+      </div>
+
+      <nav id="menu" class="navbar navbar-inverse bg2">
+          <!--主選單-->
+          <div class="container">
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="visible-xs">
+                          <button class="back" type="button"></button>
+                      </li>
+                      <li class="hidden-lg hidden-md"><!--手機版時顯示註冊-->
+                          <a>註冊</a>
+                      </li>
+
+                      <li><!--手機版時穩藏改用ICON-->
+                          <a href="home.htm">首頁</a>
+                      </li>
+                      <li>
+                          <a href="gamelist.htm">博彩遊戲</a>
+                      </li>
+                      <li>
+                          <a href="mobilecasino.htm">手機投注</a>
+                      </li>
+                      <li>
+                          <a href="promotions.htm">優惠活動</a>
+                      </li>
+                      <li>
+                          <a href="news.htm">新聞發布</a>
+                      </li>
+                      <li>
+                          <a href="support.htm">服務中心</a>
+                      </li>
+                  </ul>
+                  <!--<ul class="nav navbar-nav navbar-right"></ul>--> <!--如果有需要靠右邊的話-->
+              </div>
+          </div>
+      </nav>
+
+    </header>
+
+    <div id="PrivacyPolicy" class="pages">
+        <img src="../images/top_PrivacyPolic.jpg" class="bar" />
+        <div class="title3">
+            <img src="../images/Privacypolicy_icon.png" />
+            <div>
+                <h1>隱私權政策</h1>
+                <span>隱私權政策 - <script>document.write(location.hostname)</script></span>
+            </div>
+        </div>
+        <div class="word">
+            <div>
+                <h4>
+                    我們的隱私保護原則
+                </h4>
+                <p class="li_indent">
+                    ★根據安全性和保密性，我們嚴格保護我們收集有關客戶的所有非公開個人資訊。
+                </p>
+                <p class="li_indent">
+                    ★我們管理物理、電子和組織性的安全保障措施以保護這些資訊。
+                </p>
+                <p class="li_indent">
+                    ★我們要求任何人或組織提供產品或服務的客戶代表我們保護這些資訊的保密性。
+                </p>
+                <p class="li_indent">
+                    ★我們只允許經授權的員工和承包商，包括但不限於諮詢顧問，有機會獲得我們客戶的非公開個人信息。
+                </p>
+                <p class="li_indent">
+                    ★我們提供以前的客戶與目前現有客戶同樣的保護措施。
+                </p>
+            </div>
+            <div>
+                <h4>我們收集的個人資料</h4>
+                <p>
+                    我們收集和使用我們認為必要的信息來管理我們的業務，並為您提供您所要求的產品和服務。我們可能會收集和維護個人與非個人的資訊以提供服務。
+                </p>
+            </div>
+            <div>
+                <p>
+                    ”個人資料“包括任何可親自確定的資訊，例如：您的名字、姓氏、地址、電話、電子郵件地址、社會安全號碼、出生日期、消費記錄、遊戲記錄和其他類似的資訊。您提供資訊的方式有許多方式，例如當您通過我們的網站提交資訊給我們、註冊電子郵件或短信、移動應用程序或請求資訊等。
+                </p>
+            </div>
+            <div>
+                <h4>
+                    收集資料之使用
+                </h4>
+                <p>
+                    不會將個人資料交予第三方做為商業用途，只有我們和我們的簽約合作夥伴或是訂單處理者才能使用到您提供給我們的資訊。本網站能夠使用到您的個人資料，依照各自的職責，可能包括：銷售部，行政服務，技術服務和監督機構（審計，內部質量控制程序等）。您的個人資料依照法律規定可能需要提供給：法院人員，公職人員及債務公司等公共機構的使用。
+                </p>
+            </div>
+            <div>
+                <h4>
+                  保護措施
+                </h4>
+                <p>
+                    我們建議您盡可能保護您的個人資料，避免遭到竄改、損壞或是未經授權團體使用。
+                </p>
+            </div>
+            <div>
+                <h4>
+                    同意
+                </h4>
+                <p>
+                    當您與我們進行交流時，您所提供相關個人資訊之規定將以本政策為規範。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row quickbox">
+      <div class="col-md-3 col-sm-6 icon support">
+        <h5>客服QQ：</h5>
+        <a href="tencent://message/?uin=62888&amp;Site=&amp;menu=yes">62888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon hotcall">
+        <h5>博彩热线：</h5>
+        <a href="">+855 66288888</a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon mail">
+        <h5>联系邮箱：</h5>
+        <a href="mailto:888ldk@gmail.com ">888ldk@gmail.com </a>
+      </div>
+      <div class="col-md-3 col-sm-6 icon servicetime">
+        <h5>7x24小时：</h5>
+        <a href="#" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')">在线客服</a>
+      </div>
+    </div>
+
+
+    <!-- [root]component/footer -->
+    <footer>
+      <ul class="nav-footer">
+          <li>
+              <a href="about.htm">關於我們</a>
+          </li>
+          <li>
+              <a href="contactus.htm">聯絡我們</a>
+          </li>
+          <li>
+              <a href="responsiblegaming.htm">責任博彩</a>
+          </li>
+          <li>
+              <a>條款與規則</a>
+          </li>
+          <li>
+              <a href="privacypolicy.htm">隱私權政策</a>
+          </li>
+          <li>
+              <a href="patronprotection.htm">聯盟合作</a>
+          </li>
+      </ul>
+
+        <hr>
+        <p class="text-center">© 2015 ALL Rights Reserved by Bao Jia Li International Co., Ltd.</p>
+    </footer>
+    <div class="contact">
+        <div class="contact_div" onclick="window.open('http://messenger.providesupport.com/messenger/0122uurdkwp1o04c2gnb1anccj.html','newwindow','height=800,width=800,top=100,left=500,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no','_blank')"></div>
+        <div class="contact_div" onclick="location.href='tencent://message/?uin=62888&amp;Site=&amp;menu=yes'"></div>
+        <div class="contact_div" onclick="location.href='Skype:live:888ldk'"></div>
+        <div class="contact_div" onclick="location.href='mailto:888ldk@gmail.com'"></div>
+        <div class="cclose">X</div>
+    </div>
+    </html>
